@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrab.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.3.8/b-3.2.6/r-3.0.8/b-html5-3.2.6/b-print-3.2.6/datatables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.css"> -->
+     <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.css">
+    <style>
+        .ck-editor__editable {
+            height: 300px !important;
+            color: #000 !important;
+            textarea#editor { min-height: 300px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">LIFE OS</a>
+                    </div>
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="Enter your service">
+                    </form>
+                </div>
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons d-flex gap-3">
+                        <a href="" class="position-relative list"><i class="fa-solid fa-table-list"></i></a>
+                        <div class="messages-container position-relative" id="messages-container">
+
+                            <a href=""><i class="fa-regular  fa-envelope"></i></a>
+                            <ul class="messages-area position-absolute text-center" id="messages-area">
+                                <div class="messages-header">
+                                    <h3>The latest messages</h3>
+                                </div>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-right">
+                                        <img src="assets/images/5949493199728480618_121-removebg-preview (1).png"
+                                            alt="message">
+                                        <h4>Iman shaker</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment" style="color: #cadff3;"></i>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-right">
+                                        <img src="assets/images/6005579962171202054_121-removebg-preview.png"
+                                            alt="message">
+                                        <h4>Mohammad alkasem</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment" style="color: #cadff3;"></i>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-right">
+                                        <img src="assets/images/5949493199728480618_121-removebg-preview (1).png"
+                                            alt="message">
+                                        <h4>Amal shaker</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment" style="color: #cadff3;"></i>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-right">
+                                        <img src="assets/images/5949493199728480618_121-removebg-preview (1).png"
+                                            alt="message">
+                                        <h4>Jody katranji</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment" style="color: #cadff3;"></i>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-right">
+                                        <img src="assets/images/6005579962171202054_121-removebg-preview.png"
+                                            alt="message">
+                                        <h4>Ali mousa</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment" style="color: #cadff3;"></i>
+                                </li>
+                                <div class="s-link">
+                                    <a href="" style=" color: rgb(41, 90, 139); text-decoration: none;">All messages</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <a href="" class="position-relative bell"><i class="fa-regular fa-bell"></i></a>
+                        <a href=""><i class="fa-regular fa-user"></i></a>
+                    </div>
+                    <div class="avatar">
+                        <img src="assets/images/5949493199728480618_121-removebg-preview (1).png" alt="avatar">
+                    </div>
+                    <a data-bs-toggle="offcanvas" href="#offcanvasExample"><i
+                            class="fa-solid fa-bars-staggered"></i></a>
+
+                </div>
+            </header>
+
+
+
+        </nav>
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="90" src="assets/images/5949493199728480618_121-removebg-preview (1).png" alt="profile">
+                <h3>Iman shaker</h3>
+            </div>
+            <ul class="ul-sidebar">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="index.html" class="m-r-10">Main</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="user.html" class="m-r-10">Profile</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-list-check"></i>
+                    <a href="blog.html" class="m-r-10">Blog</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-calendar"></i>
+                    <a href="" class="m-r-10">Calender</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-heart"></i>
+                    <a href="" class="m-r-10">Habits</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    <a href="" class="m-r-10">Goals</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <a href="" class="m-r-10">Health</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-person-running"></i>
+                    <a href="" class="m-r-10">Fitness</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-plate-wheat"></i>
+                    <a href="" class="m-r-10">Nutrition</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-bed"></i>
+                    <a href="" class="m-r-10">Sleep</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-brain"></i>
+                    <a href="" class="m-r-10">Focus</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-book"></i>
+                    <a href="" class="m-r-10">Journal</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <a href="" class="m-r-10">Learning</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="" class="m-r-10">Settings</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <a href="" class="m-r-10">Finance</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content p-3" id="content">
+            <div class="inner-connect">
+                <div class="container-fluid">
+                    <h4 class="heading">ADD NEW ARTICLE:</h4>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="">Article title:</label>
+                                            <input type="text" placeholder="enter title here" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="">Link:</label>
+                                            <input type="text" placeholder="enter link here" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <label for="">Classification:</label>
+
+                                            <select class="form-select" aria-label="Dafault select example">
+                                                <option selected disabled>please select classification</option>
+                                                <option value="1">lifestyle</option>
+                                                <option value="2">health</option>
+                                                <option value="3">learning</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="">Tags:</label>
+                                            <select class="js-example-basic-multiple form-select" multiple="multiple"
+                                                name="states[]">
+                                                <option value="AL">
+                                                    Health
+                                                </option>
+                                                <option value="AL">
+                                                    Sleep
+                                                </option>
+                                                <option value="AL">
+                                                    Education
+                                                </option>
+                                                <option value="AL">
+                                                    Fitness
+                                                </option>
+                                                <option value="AL">
+                                                    Tasks
+                                                </option>
+                                                <option value="AL">
+                                                    Goals
+                                                </option>
+
+                                                <option value="WY">
+                                                    Focus
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">
+                                                    download article image
+                                                </label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">
+                                                    download banner image
+                                                </label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <textarea name="editor" id="editor" class="form-control"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--start users online  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header special">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Users online:</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="alert alert-">
+                all active users in the system!
+            </div>
+            <div class="item-side-menu mb-3">
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-primary grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img src="assets/images/5949493199728480618_121-removebg-preview (1).png" alt="avatar">
+                    <h4>Iman shaker</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-facebook-messenger icon1"></i>
+                    <i class="fa-brands fa-whatsapp icon2"></i>
+                </div>
+            </div>
+            <div class="item-side-menu mb-3">
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-primary grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img src="assets/images/6005579962171202054_121-removebg-preview.png" alt="avatar">
+                    <h4>Ahmad Alali</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-facebook-messenger icon1"></i>
+                    <i class="fa-brands fa-whatsapp icon2"></i>
+                </div>
+            </div>
+            <div class="item-side-menu mb-3">
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-primary grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img src="assets/images/5949493199728480618_121-removebg-preview (1).png" alt="avatar">
+                    <h4>Zena zekra</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-facebook-messenger icon1"></i>
+                    <i class="fa-brands fa-whatsapp icon2"></i>
+                </div>
+            </div>
+            <div class="item-side-menu mb-3">
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-primary grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img src="assets/images/5949493199728480618_121-removebg-preview (1).png" alt="avatar">
+                    <h4>Soaad almasri</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-facebook-messenger icon1"></i>
+                    <i class="fa-brands fa-whatsapp icon2"></i>
+                </div>
+            </div>
+            <div class="item-side-menu mb-3">
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-primary grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img src="assets/images/6005579962171202054_121-removebg-preview.png" alt="avatar">
+                    <h4>Omar barakat</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-facebook-messenger icon1"></i>
+                    <i class="fa-brands fa-whatsapp icon2"></i>
+                </div>
+            </div>
+            <div class="item-side-menu mb-3">
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-primary grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img src="assets/images/5949493199728480618_121-removebg-preview (1).png" alt="avatar">
+                    <h4>Aya homsia</h4>
+                </div>
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-facebook-messenger icon1"></i>
+                    <i class="fa-brands fa-whatsapp icon2"></i>
+                </div>
+            </div>
+
+
+
+
+            <div class="dropdown mt-3">
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end users online  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/vfs_fonts.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@8.3.1/dist/apexcharts.min.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/bootstrab.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script
+        src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.3.8/b-3.2.6/r-3.0.8/b-html5-3.2.6/b-print-3.2.6/datatables.min.js"></script>
+
+    <script>
+        $('#myTable').DataTable({
+            layout: {
+                topStart: 'buttons',
+                topEnd: 'search',
+                bottomStart: 'info',
+                bottomEnd: 'paging'
+            },
+            buttons: ['copy', 'excel', 'print']
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js">
+    </script>
+    <script>$(document).ready(function () {
+            $('.js-example-basic-multiple').select2({
+                tags: true,
+                maximumSelectionLength: 3
+            });
+        });</script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.umd.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/4.1.0/ckeditor/ckeditor.js"></script> -->
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.umd.js"></script> -->
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.umd.js"></script> -->
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var el = document.querySelector('#editor');
+
+            // إذا ما انحمّلت مكتبة CKEditor (إنترنت/CDN)، نخلي التيكست ايريا العادية شغالة
+            if (typeof CKEDITOR === 'undefined') {
+                console.warn('CKEditor لم يتم تحميله، تم استخدام textarea عادية');
+                return;
+            }
+
+            var {
+                ClassicEditor, Essentials, Bold, Italic, Underline, Font, Paragraph
+            } = CKEDITOR;
+
+            ClassicEditor
+                .create(el, {
+                
+                    plugins: [Essentials, Bold, Italic, Underline, Font, Paragraph],
+                    toolbar: [
+                        'undo', 'redo', '|',
+                        'bold', 'italic', 'underline', '|',
+                        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+                    ]
+                })
+                .then(function (editor) {
+                    window.editor = editor;
+                })
+                .catch(function (error) {
+                    // بدون alert: نترك الـ textarea العادية قابلة للكتابة
+                    console.error('CKEditor error:', error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>
